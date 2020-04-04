@@ -9,7 +9,7 @@ urlpatterns = [
     path('categories/', views.categories,name='categories'),
     #categories/id/
     path('categories/<int:question_id>/raftare_manfi/', views.raftare_manfi, name='raftare_manfi'),
-    #path('categories/<int:question_id>/jameh/', views.jameh, name='jameh'),
+    # path('categories/<int:question_id>/jameh/', views.jameh, name='jameh'),
 
 
 

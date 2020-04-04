@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 </head>
 <body>
-{% for raftare_manfi in id.raftar_manfi_set.all %}
+{% for raftare_manfi in raftare_manfi.raftar_manfi_set.all %}
     {{ raftare_manfi.title }}<br>
 {% endfor %}
 </body>
