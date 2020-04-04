@@ -9,9 +9,11 @@ def categories(request):
 
 def raftare_manfi(request, question_id):
     raftare_manfi = get_object_or_404(models.categories, pk=question_id)
+    print(raftare_manfi)
     return render(request, 'Molavi/raftare_manfi.html', {'raftare_manfi': raftare_manfi})
 
 
-# def jameh(request, question_id):
-#     jameh = get_object_or_404(models.categories, pk=question_id)
-#     return render(request, 'Molavi/jameh.html', {'jameh': jameh})
+def jameh(request, question_id):
+    jameh = get_object_or_404(models.categories, pk=question_id)
+    print(jameh)
+    return render(request, 'Molavi/jameh.html', {'jameh': jameh})
