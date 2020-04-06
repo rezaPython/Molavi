@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+{% if categories_raftare_manfi.raftar_manfi_set.all %}
+{% for raftare_manfi in categories_raftare_manfi.raftar_manfi_set.all %}
+    <a href="{% url 'Molavi:results' raftare_manfi.id %}">{{ raftare_manfi.title }}</a>
+    <br>
+
+{% endfor %}
+{% elif categories_raftare_mosbat.raftar_mosbat_set.all %}
+   {% for raftare_mosbat in categories_raftare_mosbat.raftar_mosbat_set.all %}
+       {{ raftare_mosbat.title }}<br>
+    {% endfor %}
+{% elif categories_jameh.jameh_set.all %}
+    {% for jameh in categories_jameh.jameh_set.all %}
+        {{ jameh.title }}<br>
+    {% endfor %}
+{% endif %}
+
+
+</body>
+</html>
